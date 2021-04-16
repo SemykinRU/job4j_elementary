@@ -4,10 +4,10 @@ public class Mortgage {
     public static int year(int amount, int salary, double percent) {
         int year = 0;
          while (true) {
-              if ((amount + (amount * percent / 100)) <= salary){
+              if ((amount + (amount * percent / 100)) <= salary) {
                   year++;
                   break;
-              }else {
+              } else {
                   amount = (amount + (int) (amount * percent) / 100) - salary;
                   year++;
               }

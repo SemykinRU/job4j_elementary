@@ -36,6 +36,7 @@ public class MortgageTest {
         int expected = 3;
         Assert.assertEquals(expected, result);
     }
+
     @Test
     public void when4Year() {
         int amount = 180;
@@ -45,6 +46,7 @@ public class MortgageTest {
         int expected = 4;
         Assert.assertEquals(expected, result);
     }
+
     @Test
     public void when5Year() {
         int amount = 200;
