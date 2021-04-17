@@ -3,6 +3,7 @@ package ru.job4j.array;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
 public class FindLoopTest {
@@ -32,5 +33,36 @@ public class FindLoopTest {
         int result = FindLoop.indexOf(data, el);
         int expected = -1;
         Assert.assertEquals(expected, result);
+    }
+
+    @Test
+    public void whenFind3() {
+        int[] data = new int[] {5, 2, 10, 2, 4};
+        int el = 2;
+        int start = 2;
+        int finish = 4;
+        int result = FindLoop.indexOf(data, el, start, finish);
+        int expected = 3;
+        Assert.assertEquals(expected, result);
+    }
+
+    @Test
+    public void whenFindMinus1() {
+        int[] data = new int[] {1, 2, 3, 4};
+        int el = 10;
+        int start = 0;
+        int finish = 2;
+        int result = FindLoop.indexOf(data, el, start, finish);
+        assertThat(-1, is(result));
+    }
+
+    @Test
+    public void whenFind4() {
+        int[] data = new int[]{1, 2, 3, 4, 5};
+        int el = 5;
+        int start = 0;
+        int finish = 4;
+        int result = FindLoop.indexOf(data, el, start, finish);
+        assertThat(4, is(result));
     }
 }
