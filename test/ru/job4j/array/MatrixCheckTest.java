@@ -32,13 +32,13 @@ public class MatrixCheckTest {
     }
 
     @Test
-    public void whenHasNotMonoHorizontalRow0() {
+    public void whenHasNotMonoHorizontalRow1Inverse() {
         char[][] input = {
                 {' ', ' ', ' '},
-                {'X', 'X', 'X'},
+                {'X', 'X', '1'},
                 {' ', ' ', ' '},
         };
-        int row = 0;
+        int row = 1;
         boolean result = MatrixCheck.monoHorizontal(input, row);
         Assert.assertFalse(result);
     }
