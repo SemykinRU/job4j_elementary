@@ -27,4 +27,25 @@ public class PointTest {
         Point point2 = new Point(3, 3);
         Assert.assertEquals(2.828, point1.distance(point2), 0.01);
     }
+
+    @Test
+    public void when050to333then4d69() {
+        Point point1 = new Point(0, 5, 0);
+        Point point2 = new Point(3, 3, 3);
+        Assert.assertEquals(4.69, point1.distance3d(point2), 0.01);
+    }
+
+    @Test
+    public void when153to000then5d91() {
+        Point point1 = new Point(1, 5, 3);
+        Point point2 = new Point(0, 0, 0);
+        Assert.assertEquals(5.91, point1.distance3d(point2), 0.01);
+    }
+
+    @Test
+    public void whenMinus3Minus7Plus3toMinus200then7d68() {
+        Point point1 = new Point(-3, -7, 3);
+        Point point2 = new Point(-2, 0, 0);
+        Assert.assertEquals(7.68, point1.distance3d(point2), 0.01);
+    }
 }
